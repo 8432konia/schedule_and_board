@@ -1,0 +1,34 @@
+.loginForm{
+	input[type="text"], input[type="password"]{
+		box-sizing: content-box;
+		color: $gray;
+		font-size: 13px;
+		font-weight: 300;
+	}
+
+	.switchLink {
+		color: $darkblue;
+	}
+}
+
+.planThead {
+	tr {
+		th {
+			color: $black;
+			font-weight: bold;
+			border-bottom: 3px solid $emerald;
+			text-align: center;
+		}
+	}
+}
+
+.planTbody {
+	tr {
+		height: 5vh;
+	}
+	td {
+		color: $gray;
+		border-bottom: 1px solid $lightgray;
+		text-align: center;
+	}
+}

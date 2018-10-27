@@ -1,0 +1,183 @@
+.mgR1 {
+  margin-right: 1vw;
+}
+
+.mgL1 {
+  margin-left: 1vw;
+}
+
+.pc-only {
+  @include sp {
+    display: none;
+  }
+  @include pc {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 30vw;
+  }
+}
+
+.calendarTable {
+  text-align: center;
+  @include sp {
+    width: 90vw;
+    margin-left: 4vw;
+  }
+  @include pc {
+    width: 40vw;
+    margin: 0 30vw;
+  }
+  .isToday {
+    background-color: $orange;
+  }
+  td {
+    @include sp {
+      font-size: 1.5rem;
+      height: 1.8rem;
+    }
+    @include pc {
+      font-size: 2rem;
+      height: 4rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $darkgray;
+      }
+    }
+    border: solid 1px black;
+  }
+  td:nth-child(7n-6) , .sunday{
+    color: $lightred;
+  }
+  td:nth-child(7n) , .saturday{
+    color: $lightblue;
+  }
+}
+
+#select-day {
+  background-color: $darkgray;
+}
+
+.registerForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  @include sp {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  @include pc {
+    margin-top: 20px;
+  }
+}
+
+.reserve {
+  width: 100vw;
+  margin: 1vw 0;
+  text-align: center;
+  color: $lightred;
+  @include sp {
+    font-size: 1.8rem;
+  }
+  @include pc {
+    font-size: 2rem;
+  }
+}
+
+.calendarTitle {
+  width: 100vw;
+  text-align: center;
+  @include sp {
+    font-size: 1.8rem;
+  }
+  @include pc {
+    margin: 1vw 0 2vw 0;
+    font-size: 3rem;
+  }
+}
+
+.planChange {
+  display: flex;
+  justify-content: center;
+  @include sp {
+    margin-bottom: 5vw;
+  }
+  @include pc {
+    margin-bottom: 1vw;
+  }
+}
+
+.planTable {
+  border-collapse: collapse;
+  @include sp {
+    width: 90vw;
+    font-size: .8rem;
+    margin-left: 5vw;
+  }
+  @include pc {
+    width: 40vw;
+    font-size: 1rem;
+    margin-left: 30vw;
+  }
+}
+
+.planId {
+  width: 2vw;
+}
+
+.planTime {
+  width: 10vw;
+}
+
+.planContent {
+  width: 28vw;
+}
+
+.noPlan {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.button_kind {
+  background: $lightgray;
+  color: $black;
+  font-weight: normal;
+  @include sp {
+    width: 30vw;
+    height: 10vw;
+  }
+  @include pc {
+    width: 5vw;
+    height: 2vw;
+  }
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@include pc {
+  #prev-month,#next-month {
+    font-size: 1.5vw;
+    cursor: pointer;
+  }
+}
+
+@include sp {
+  .mgL35 {
+    margin-left: 35vw;
+  }
+  .mgR10 {
+    margin-right: 10vw;
+  }
+  .dateInput {
+    width: 80vw;
+    margin-bottom: 10vw;
+  }
+  .timeInput {
+    width: 30vw;
+    margin-bottom: 10vw;
+  }
+  .textInput {
+    width: 80vw;
+    margin-bottom: 5vw;
+  }
+}

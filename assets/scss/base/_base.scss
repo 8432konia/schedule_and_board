@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  @include sp {
+    margin: 15vw 0;
+  }
+}
+
+li {
+  list-style: none;
+}

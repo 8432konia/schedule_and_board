@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>登録情報変更画面</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+	<form action="schedule.php?mode=schedule" method="post">
+		<table id="modeTable" class="l-table loginForm gray">
+			<thead>
+				<tr>
+					<th colspan="3">変更画面</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>日付</td>
+					<td>
+						<input type="date" name="date" value="!date!">
+						<input type="time" name="start" value="!start!" step="300">～<input type="time" name="end" value="!end!" step="300">
+					</td>
+				</tr>
+				<tr>
+					<td>予定</td>
+					<td><input type="text" name="content" value="!content!"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<input type="submit" class="submit l-submit skyblue two-btn" onclick="modeAdd(this)" value="完了">
+						<input type="submit" class="submit l-submit skyblue two-btn" value="前へ戻る">
+						<input type="hidden" name="plan_id" value="!id!">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+	<script src="/assets/js/branch.js" charset="utf-8"></script>
+</body>
+</html>

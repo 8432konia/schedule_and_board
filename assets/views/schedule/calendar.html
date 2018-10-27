@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>予定帳</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+  <main>
+    <button class="l-backButton backButton backpostion" onclick="location.href='/routes/mypage.php'">前のページに戻る</button>
+    <h1 class="calendarTitle"><span id="js-year"></span>年 <span id="js-month"></span>月</h1>
+    <div class="pc-only">
+      <div id="next-month">▶</div>
+      <div id="prev-month">◀</div>
+    </div>
+    <table class="calendarTable" id = "js-calendar-table">
+      <thead>
+        <tr>
+          <th class="sunday">日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th class="saturday">土</th>
+        </tr>
+      </thead>
+      <tbody id="js-calendar-body">
+      </tbody>
+    </table>
+    <form class="registerForm" action="schedule.php?mode=schedule" method="post">
+      <label class="mgR1">日付：<input type="date" name="date" value="" class="mgR1 dateInput"></label>
+      <label class="mgR1">時間：<input type="time" name="start" value="" step="300" class="mgR1 timeInput">～<input type="time" name="end" value="" step="300" class="mgL1 timeInput"></label>
+      <label class="mgR1">予定：<input type="text" name="content" value="" class="textInput"></label>
+      <input type="submit" name="register" value="登録" class="button_kind mgL35">
+      <input type="hidden" id="user" name="user" value="!id!">
+    </form>
+    <div>
+      <p id="js-reserve" class="reserve"></p>
+      <form method="post" id="planTable">
+      </form>
+    </div>
+  </main>
+  <script src="/assets/js/branch.js" charset="utf-8"></script>
+  <script src="/assets/js/calendar.js" charset="utf-8"></script>
+</body>
+</html>

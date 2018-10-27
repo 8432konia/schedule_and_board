@@ -1,0 +1,23 @@
+.l-table{
+	margin:7.5vw auto;
+	padding: 15px 15px;
+	@include sp {
+		width: 100vw;
+	}
+	@include pc {
+		width: 450px;
+	}
+	height:300px;
+	input[type="text"], input[type="password"]{
+		width:200px;
+		height: auto;
+    	line-height: 20px;
+    	outline: 0;
+    	padding: 4px 9px;
+    	border-radius: 10px;
+	}
+
+	.passbtn{
+	    padding: 0 0 20px 0;
+	}
+}

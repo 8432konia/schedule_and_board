@@ -1,0 +1,74 @@
+.backpostion {
+  margin:1vw 0 0 3vw;
+}
+
+.cbform {
+  text-align: center;
+  textarea {
+    margin-left: 4vw;
+    @include sp {
+      width: 90vw;
+    }
+    border-radius: 10px;
+  }
+  .contribution {
+    @include sp {
+      width: 30vw;
+    }
+  }
+}
+
+.bbsTable {
+  width: 90vw;
+  @include pc {
+    font-size: 1.2rem;
+  }
+  @include sp {
+    font-size: .8rem;
+  }
+  margin-left: 5vw;
+}
+
+.bbsTime {
+  width: 15vw;
+}
+
+.bbsName {
+  width: 15vw;
+}
+
+.bbsContent {
+  width: 50vw;
+}
+
+.pager {
+  margin-top: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  a {
+    float: left;
+    @include pc {
+      width:50px;
+      font-size: 16px;
+    }
+    @include sp {
+      width:10vw;
+      height: 4vh;
+      font-size: .7rem;
+    }
+    color: $black;
+    text-decoration: none;
+    display: block;
+    padding: 0.6em 1em;
+    border-radius: 5px;
+    margin-right: 10px;
+    &:hover {
+      background: $lightgray;
+    }
+  }
+  .current {
+      background: $lightgray !important;
+    }
+}

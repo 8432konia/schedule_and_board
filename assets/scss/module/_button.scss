@@ -1,0 +1,24 @@
+.submit{
+	color: $white;
+    display: block;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.backButton {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: $darkblue;
+  background: $white;
+  font-weight: bold;
+  transition: .4s;
+  &:hover {
+    background: $darkblue;
+    color: $white;
+  }
+}

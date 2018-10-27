@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>掲示板</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+  <main>
+    <button class="l-backButton backButton backpostion" onclick="location.href='/routes/mypage.php'">前のページに戻る</button>
+    <div class="cbform">
+      <form class="registerForm" action="bbs.php?mode=bbs" method="post">
+        <textarea name="text" rows="4" cols="40" placeholder="ここに書きましょう．"></textarea>
+        <input type="submit" name="register" value="投稿" class="backpostion backButton l-backButton contribution mgL35">
+        <input type="hidden" id="user" name="user_id" value="!id!">
+        <input type="hidden" id="user" name="mode" value="bbs">
+      </form>
+    </div>
+    <div>
+      <h1>みんなの心をアンロック</h1>
+      <table class="bbsTable">
+        <thead class="planThead">
+          <tr>
+            <th class="bbsTime">投稿日時</th>
+            <th class="bbsName">投稿者</th>
+            <th class="bbsContent">内容</th>
+          </tr>
+        </thead>
+        <tbody class="planTbody" id="bbsContent">
+          !tmpl!
+        </tbody>
+      </table>
+      <div class="pager">
+        !paging!
+      </div>
+    </div>
+  </main>
+</body>
+</html>

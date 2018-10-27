@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>マイページ</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+	<form action="mypage.php" method="post">
+		<table class="l-table loginForm gray" id="modeTable">
+			<thead>
+				<tr>
+					<th colspan="4" align="center">マイページ</th>
+				</tr>
+			</thead>
+			<tbody id="mybtn">
+				<tr>
+					<td colspan="2" align="center"><input type="submit" class="submit l-submit skyblue" onclick="modeChange(this)" value="登録情報確認"></td>
+					<td colspan="2" align="center"><input type="submit" class="submit l-submit skyblue" onclick="modeChange(this)" value="予定帳"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" class="submit l-submit skyblue" onclick="modeChange(this)" value="掲示板"></td>
+					<td colspan="2" align="center"><a href="/routes/logout.php" class="link"><input type="button"  class="submit l-submit skyblue"value="ログアウト"></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="hidden" name="id" value="!id!">
+	</form>
+	<script src="/assets/js/command.js" charset="utf-8"></script>
+	<script src="/assets/js/branch.js" charset="utf-8"></script>
+</body>
+</html>
