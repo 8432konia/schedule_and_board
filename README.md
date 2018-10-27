@@ -1,5 +1,4 @@
-# schedule_and_board
-予定管理 ➕掲示板
+# 予定管理 ➕掲示板
 ノーフレームワークかつノーjQueryで書きました。
 
 主な設定はmodules/config.phpで行なってください。
