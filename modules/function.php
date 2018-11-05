@@ -78,38 +78,33 @@ function errorCheck($_postdata,$error,$conf,$count){
 function paging($limit, $page, $pagenation){
 	$paging = "";
 	$pageUrl = "/routes/bbs.php?mode=bbs&page=";
-	//$pagenationはページ番号の表示数
 	$next = $page + 1;
 	$prev = $page - 1;
 
 	//ページ番号リンク用
-	$start =  ($page - floor($pagenation / 2) > 0) ? ($page - floor($pagenation / 2)) : 1;//始点
-	$end =  ($start > 1) ? ($page + floor($pagenation / 2)) : $pagenation;//終点
-	$start = ($limit < $end) ? $start - ($end - $limit):$start;//始点再計算
-	//前へリンク
+	$start =  ($page > 1) ? $page : 1;//始点
+	$end =  ($start > 1) ? $start + 4 : 5;//終点
 	if(intval($page) !== 1) {
 		$paging .= '<a href="'.$pageUrl.$prev.'" class="darkgray">&laquo; 前へ</a>';
 	}
-	//最初のページへのリンク
-	if($start > floor($pagenation / 2)){
+	if($start > 3){
 		$paging .= '<a href="'.$pageUrl.'1" class="darkgray">1</a>';
-		if($start > floor($pagenation / 2)){
-			$paging .= "..."; //ドットの表示
+		if($start > 4){
+			$paging .= "...";
 		}
 	}
-	//ページリンク表示ループ
-	for($i=$start; $i <= $end ; $i++){
-		$class = ($page == $i) ? 'class="darkgray current"':'class="darkgray"';//現在地を表すCSSクラス
-		//1以上最大ページ数以下の場合
+	// ページリンクの表示
+	for($i= $start - 2; $i <= $end - 2; $i++){
+		$class = ($page == $i) ? 'class="darkgray current"':'class="darkgray"';
 		if($i <= $limit && $i > 0){
-			$paging .= '<a href="'.$pageUrl.$i.'"'.$class.'>'.$i.'</a>';//ページ番号リンク表示
+			$paging .= '<a href="'.$pageUrl.$i.'"'.$class.'>'.$i.'</a>';
 		}
 	}
 
 	//最後のページへのリンク
-	if($limit > $end){
+	if($limit > $end - 2){
 		if($limit-1 > $end ){
-			$paging .= "...";//ドットの表示
+			$paging .= "...";
 		}
 		$paging .= '<a href="'.$pageUrl.$limit.'" class="darkgray">'.$limit.'</a>';
 	}
@@ -119,3 +114,4 @@ function paging($limit, $page, $pagenation){
 	}
 	return $paging;
 }
+
