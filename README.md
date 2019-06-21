@@ -8,7 +8,7 @@ sassを用いる場合は自分で用意をするか、<a href="https://github.c
 
 ・login
 
-| culomn_name | type |
+| column_name | type |
 ----|---- 
 | id | int |
 | name | varchar |
@@ -18,7 +18,7 @@ sassを用いる場合は自分で用意をするか、<a href="https://github.c
 
 ・post
 
-| culomn_name | type |
+| column_name | type |
 ----|---- 
 | id | int |
 | content | text |
@@ -32,7 +32,7 @@ sassを用いる場合は自分で用意をするか、<a href="https://github.c
 
 ・bss
 
-| culomn_name | type |
+| column_name | type |
 ----|---- 
 | id | int |
 | text | text |
