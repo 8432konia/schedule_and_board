@@ -6,10 +6,39 @@ sassを用いる場合は自分で用意をするか、<a href="https://github.c
 
 データベースのテーブルについて(カラム名:型)
 
-・login ： id:int name:varchar email:varchar pass:varchar tel:varchar
+・login
 
-・post  : id:int content:text date:date start:time end:time user_id:int
+| culomn_name | type |
+----|---- 
+| id | int |
+| name | varchar |
+| email | varchar |
+| pass | varchar |
+| tel | varchar |
 
-・bss   : id:int text:text datetime:datetime user_id:int
+・post
+
+| culomn_name | type |
+----|---- 
+| id | int |
+| content | text |
+| date | date |
+| start | time |
+| end | time |
+| user_id | int |
+
+
+
+
+・bss
+
+| culomn_name | type |
+----|---- 
+| id | int |
+| text | text |
+| date | date |
+| datetime | datetime |
+| user_id | int |
+
 
 といった具合です。
